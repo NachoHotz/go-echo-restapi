@@ -7,7 +7,6 @@ import (
 
 // BasicMiddleware ...
 func BasicMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
-	// TODO
 	return func(c echo.Context) error {
 		authToken := c.Request().Header.Get("Authorization")
 
