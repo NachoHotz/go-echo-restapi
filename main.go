@@ -1,3 +1,4 @@
+// Package main
 package main
 
 import (
@@ -6,10 +7,10 @@ import (
 )
 
 func main() {
-  e := echo.New()
+	e := echo.New()
 
-  routes.IndexRouter(e)
-  routes.TaskRouter(e)
+	routes.IndexRouter(e)
+	routes.TaskRouter(e)
 
-  e.Start(":3001")
+	e.Start(":3001")
 }
