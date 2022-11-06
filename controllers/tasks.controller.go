@@ -11,7 +11,6 @@ var tasks = []models.Task{}
 
 var invalidIDMessage = "Invalid task ID"
 
-// GetTasks ...
 func GetTasks(c echo.Context) error {
   if len(tasks) == 0 {
     return c.JSON(404, "No tasks found")
@@ -20,7 +19,6 @@ func GetTasks(c echo.Context) error {
   return c.JSON(200, tasks)
 }
 
-// GetTask ...
 func GetTask(c echo.Context) error {
   taskID, err := strconv.Atoi(c.Param("id"))
 
@@ -49,7 +47,6 @@ func GetTask(c echo.Context) error {
   return c.JSON(200, taskFound)
 }
 
-// CreateTask ...
 func CreateTask(c echo.Context) error {
   taskBody := new(models.Task)
 
@@ -76,7 +73,6 @@ func CreateTask(c echo.Context) error {
   return c.JSON(201, taskBody)
 }
 
-// UpdateTask ...
 func UpdateTask(c echo.Context) error {
   taskID, err := strconv.Atoi(c.Param("id"))
 
@@ -112,7 +108,6 @@ func UpdateTask(c echo.Context) error {
   return c.JSON(200, taskBody)
 }
 
-// DeleteTask ...
 func DeleteTask(c echo.Context) error {
   taskID, err := strconv.Atoi(c.Param("id"))
 

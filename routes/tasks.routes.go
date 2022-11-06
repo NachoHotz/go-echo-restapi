@@ -1,4 +1,3 @@
-// Package routes ...
 package routes
 
 import (
@@ -6,7 +5,6 @@ import (
   "github.com/nachohotz/go-echo-restapi/controllers"
 )
 
-// TaskRouter ...
 func TaskRouter(e *echo.Echo) {
   tasksRouter := e.Group("/tasks")
 
